@@ -15,7 +15,7 @@ reset.addEventListener("click", (e) => {
 function Pop() {
   mainContainer.addEventListener("touchstart", function (e) {
     target.innerHTML = "😮😮😮";
-    Image.setAttribute("src", "img/pict1.png");
+    Image.setAttribute("src", "img/pict1.jpg");
     counter++;
     audio.play();
     countContainer.innerHTML = counter;
@@ -27,7 +27,7 @@ function Pop() {
     audio.currentTime = 0;
     counter == 100 && alert("ngapain anda?");
     counter == 1000 && alert("udah woi?");
-    Image.setAttribute("src", "img/pict2.png");
+    Image.setAttribute("src", "img/pict2.jpg");
   });
 }
 Pop();
