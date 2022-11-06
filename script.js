@@ -1,10 +1,10 @@
 const target = document.querySelector("h1");
 const Image = document.querySelector("#imageContainer");
-const mainContainer = document.querySelector(".mainContainer");
+const mainContainer = document.querySelector(".container");
 const countContainer = document.querySelector("#count");
 const reset = document.querySelector("#reset");
 const changeBG = document.querySelector("#changeBG");
-
+const audio = document.querySelector("audio");
 let counter = 0;
 reset.addEventListener("click", (e) => {
   counter = 0;
@@ -14,17 +14,20 @@ reset.addEventListener("click", (e) => {
 
 function Pop() {
   mainContainer.addEventListener("touchstart", function (e) {
-    target.innerHTML = "😉✨";
-    Image.setAttribute("src", "img/pict1.jpg");
+    target.innerHTML = "😮😮😮";
+    Image.setAttribute("src", "img/pict1.png");
     counter++;
+    audio.play();
     countContainer.innerHTML = counter;
   });
 
   mainContainer.addEventListener("touchend", function (e) {
-    target.innerHTML = "Hello";
+    target.innerHTML = "🙂🙂🙂";
+    audio.pause();
+    audio.currentTime = 0;
     counter == 100 && alert("ngapain anda?");
     counter == 1000 && alert("udah woi?");
-    Image.setAttribute("src", "img/pict2.jpg");
+    Image.setAttribute("src", "img/pict2.png");
   });
 }
 Pop();
